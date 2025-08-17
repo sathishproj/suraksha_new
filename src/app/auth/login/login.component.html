@@ -1,0 +1,44 @@
+<div class="login-container">
+  <!-- Left panel (white background) -->
+  <div class="login-left">
+    <img src="assets/logo.png" alt="Soukhya" class="logo" />
+  </div>
+
+  <!-- Right panel (background image) -->
+  <div class="login-right"></div>
+
+  <!-- Login card -->
+  <div class="login-card">
+    <h3 class="mb-4 text-center">Welcome to Soukhya</h3>
+
+    <form (ngSubmit)="onLogin()">
+      <div class="mb-3 position-relative">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Email"
+          [(ngModel)]="email"
+          name="email"
+          required
+        />
+        <i class="bi bi-envelope input-icon"></i>
+      </div>
+
+      <div class="mb-3 position-relative">
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Password"
+          [(ngModel)]="password"
+          name="password"
+          required
+        />
+        <i class="bi bi-lock input-icon"></i>
+      </div>
+
+      <button class="btn btn-primary w-100" type="submit">Login</button>
+
+      <p class="text-danger mt-3" *ngIf="errorMessage">{{ errorMessage }}</p>
+    </form>
+  </div>
+</div>

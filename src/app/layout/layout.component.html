@@ -1,0 +1,103 @@
+<!-- Header -->
+<header class="d-flex justify-content-between align-items-center p-3 bg-light shadow-sm">
+  <div class="d-flex align-items-center">
+    <img src="assets/auth_bg.jpeg" alt="Soukhya Logo" height="40" class="me-2" />
+    <span class="fw-bold text-primary">Soukhya Health</span>
+  </div>
+
+  <div class="d-flex align-items-center">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" 
+         alt="User" 
+         class="rounded-circle me-2" 
+         width="32" 
+         height="32" />
+    <span class="fw-semibold text-primary">Welcome to Soukhya</span>
+  </div>
+</header>
+
+<!-- Layout with Sidebar + Main -->
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="bg-dark text-white p-3 vh-100" style="width: 250px;">
+    <h4 class="mb-4">Admin Panel</h4>
+    <ul class="nav flex-column">
+
+      <!-- Dashboard -->
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="../dashboard" routerLinkActive="active">
+          <i class="bi bi-speedometer2"></i> Dashboard
+        </a>
+      </li>
+
+      <hr class="text-secondary">
+
+      <!-- General Enquiry -->
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="../general-enquiry" routerLinkActive="active">
+          <i class="bi bi-envelope"></i> General Enquiry
+        </a>
+      </li>
+
+      <!-- Geriatric Care -->
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="../geriatric-care" routerLinkActive="active">
+          <i class="bi bi-heart-pulse"></i> Geriatric Care
+        </a>
+      </li>
+
+      <!-- Testimonials -->
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="../testimonials" routerLinkActive="active">
+          <i class="bi bi-chat-left-quote"></i> Testimonials
+        </a>
+      </li>
+
+      <!-- Medical Tourism -->
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="../medical-tourism" routerLinkActive="active">
+          <i class="bi bi-globe"></i> Medical Tourism
+        </a>
+      </li>
+
+      <!-- Packages -->
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="../packages" routerLinkActive="active">
+          <i class="bi bi-box-seam"></i> Packages
+        </a>
+      </li>
+
+      <!-- Brochures -->
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="../brochures" routerLinkActive="active">
+          <i class="bi bi-file-earmark-pdf"></i> Brochures
+        </a>
+      </li>
+
+      <!-- Services -->
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="../services" routerLinkActive="active">
+          <i class="bi bi-hospital"></i> Services
+        </a>
+      </li>
+
+      <!-- Blogs -->
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="../blogs" routerLinkActive="active">
+          <i class="bi bi-journal-text"></i> Blogs
+        </a>
+      </li>
+
+      <!-- Logout -->
+      <li class="nav-item mt-4">
+        <button class="btn btn-danger w-100" (click)="logout()">
+          <i class="bi bi-box-arrow-right"></i> Logout
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="flex-grow-1 p-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>
